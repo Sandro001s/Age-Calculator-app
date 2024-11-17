@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+.poppins-bold,.inp,h3 {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-regular-italic,.displaydivs,.displayerror {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 86%);
+}
+
+.container{
+    background-color: white;
+    width: 55rem;
+    height: 50rem;
+    border-bottom-right-radius: 40%;
+    position: relative;
+}
+
+.inputsdiv{
+    display: flex;
+    gap: 40px;
+    margin-top: 3rem;
+    margin-left: 4rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.inp{
+    height: 6rem;
+    width: 11rem;
+    border-radius: 20px;
+    border: 1px solid hsl(0, 1%, 80%);
+    font-size: 2rem;
+    padding-left: 20px;
+    outline: none;
+}
+
+h3{
+    color: hsl(0, 1%, 44%);
+    margin-bottom: 15px;
+}
+
+.line::after{
+    content: "";
+    height: 1px;
+    width: 46rem;
+    background-color: hsl(0, 1%, 70%);
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+
+.displaydivs{
+    margin-top: 10rem;
+    font-size: 3rem;
+    margin-left: 4rem;
+}
+
+h1 > span {
+    color: hsl(259, 100%, 65%);
+    margin-right: 30px;
+}
+
+.circle{
+    background-color: hsl(259, 100%, 65%);
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50px;
+    left: 88%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.inside{
+    width: 5px;
+    height: 40px;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    transition: 0.2s;
+}
+
+.circle:hover .inside{
+    top: 25%;
+    transform: rotate(90deg);
+}
+
+.displayerror{
+    color: rgb(255, 75, 75);
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.errortextcolor{
+    color: red;
+}
+
+.errorbordercolor{
+    border: 1px red solid;
+}
+
+@media (max-width: 880px) {
+    .container{
+        width: 40rem;
+    }
+    .inp{
+        height: 4rem;
+        width: 8rem;
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 14px;
+    }
+    .line::after{
+        width: 30rem;
+        top: 30%;
+    }
+    .circle{
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%,-50%);
+        width: 60px;
+        height: 60px;
+    }
+    .inside{
+        width: 3px;
+        height: 30px;
+    }
+    h1 > span{
+        font-size: 60px;
+    }
+    .displaydivs{
+        font-size: 2.4rem;
+        margin-top: 9rem;
+    }
+}
